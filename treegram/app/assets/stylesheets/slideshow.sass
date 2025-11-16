@@ -1,0 +1,84 @@
+.slideshow-container
+  width: 50%
+  height: 300px
+  overflow: hidden
+  cursor: pointer    // Pointer cursor to indicate it's interactive
+  border: 2px solid black
+  padding: 0 0 30px 0  // Add some space below the image for the caption
+
+.slide
+  display: none
+  width: 100%
+  height: 100%
+  position: relative
+  display: flex      // Use flex to center the image and caption vertically and horizontally
+  justify-content: center
+  align-items: center
+
+.slide-image
+  width: 100%
+  height: auto
+  max-height: calc(100% - 10px) // Ensure the image height doesn't exceed the container height minus space for the caption
+  object-fit: contain // Maintain aspect ratio
+
+.caption
+  position: relative
+  background-color: rgba(0, 0, 0, 0.6)  // Semi-transparent background for readability
+  color: white
+  font-size: 16px
+  padding: 10px
+  text-align: center
+
+.popup
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: white
+  border: 1px solid black
+  padding: 20px
+  max-width: 500px
+
+.popup-content
+  text-align: center
+
+.popup h2
+  font-size: 14px
+  margin-bottom: 20px
+
+.popup p
+  font-size: 18px
+  margin: 15px
+  line-height: 1.6
+
+#new-comment
+  width: 80%
+  font-size: 16px
+  border: 1px solid black
+
+#submit-comment
+  margin-top: 10px
+  padding: 10px 20px
+  font-size: 16px
+  background-color: #4CAF50
+  color: white
+  border: none
+  border-radius: 4px
+  cursor: pointer
+
+#submit-comment:hover
+  background-color: #45a049
+
+#close-popup
+  margin-top: 10px
+  padding: 10px 20px
+  font-size: 16px
+  background-color: #c93c32
+  color: white
+  border: none
+  border-radius: 4px
+  cursor: pointer
+
+#close-popup:hover
+  background-color: #9c251c
+

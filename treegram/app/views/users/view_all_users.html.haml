@@ -1,0 +1,12 @@
+<h1>All Users</h1>
+
+.row
+  .col-sm-5
+    = link_to 'Return to home page', user_path(current_user), class: ["btn", "btn-warning", 'btn-return']
+
+%ul
+  - @users.each do |user|
+    - if user != current_user
+      %li{style: "display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"}
+        %p{style: "margin: 0; font-size: 24px;"}= user.email
+        = button_to 'Follow', follow_user_path(user.id), method: :post, class: 'btn btn-primary'
